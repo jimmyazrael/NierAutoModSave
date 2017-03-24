@@ -1,5 +1,6 @@
 NieR:AutoModSave v0.1 by jimmyazrael
-This script will guide and help you to import Nier:A's saves shared by others.
+
+This tool will guide and help you to import Nier:A's saves shared by others.
 
 Requirement:
 1. Preferably you should have received the whole save folder,
