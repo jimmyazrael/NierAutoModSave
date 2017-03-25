@@ -14,6 +14,7 @@ again, simply treat your own backup save folder as the one shared by someone els
 and repeat the very same steps stated below.
 
 Steps:
+0. ( !IMPORTANT) PUT YOUR STEAM TO OFFLINE MODE; 
 1. Back up your WHOLE save folder, which is likely located at Documents\My Games\NieR_Automata ;
 2. Remove everything except Graphic.ini in that folder;
 3. Put the files (except Graphic.ini) you received from another player in the folder;
