@@ -2,6 +2,12 @@ NieR:AutoModSave v0.1 by jimmyazrael
 
 This tool will guide and help you to import Nier:A's saves shared by others.
 
+Warning:
+
+If you're using Steam Cloud Sync, swithing saves will cause confict between the cloud save and the local files, and if choose to update cloud saves, it will raplace the original cloud save. 
+
+You are advised to disable the Cloud Sync feature for this game to avoid trouble when using this tool. 
+
 Requirement:
 
 1. Preferably you should have received the whole save folder,
