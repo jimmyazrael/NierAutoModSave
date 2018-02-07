@@ -26,6 +26,7 @@ else if you prefer .py script and you have Python installed:
 
 import os
 import glob
+import platform
 
 msg = dict()
 # English messages
@@ -85,4 +86,9 @@ with open('GameData.dat', 'r+b') as f:
     f.write(content)
 
 print msg['end']
-os.system('pause')  # I don't think anybody will use this on linux so it's fine
+p = platform.system()
+if p == 'Windows':
+    os.system('pause')  # I don't think anybody will use this on linux
+# Well, if you insist...
+elif p == 'Linux' or p == 'Darwin':
+    os.system("""bash -c 'read -n 1 -s -r -p "Press any key to continue\n"'""")
