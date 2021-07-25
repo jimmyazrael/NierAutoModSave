@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+r"""
 NieR:AutoModSave v0.1 by jimmyazrael
 This script will guide and help you to import Nier:A's saves shared by others.
 
@@ -46,8 +47,8 @@ msg['end'] = '\nFinished. Glory to mankind!\n'
 
 # Rename the GameData file
 while not glob.glob('GameData.dat'):
-    print msg['gd_not_found'] # Have to use print, raw_input just hates Chinese
-    raw_input()
+    print(msg['gd_not_found']) # Have to use print, input just hates Chinese
+    input()
 if glob.glob('savemod_GameData.dat'):
     os.remove('savemod_GameData.dat')
 os.rename('GameData.dat', 'savemod_GameData.dat')
@@ -60,8 +61,8 @@ while True:
             sig = f.read(15)
             break
     except IOError:
-        print msg['gen_msg']
-        raw_input()
+        print(msg['gen_msg'])
+        input()
         pass
 
 # We have the sig, the new GameData.dat just outlives its usefulness
@@ -69,7 +70,7 @@ os.remove('GameData.dat')
 
 # Modify save slot(s) data header with the sig str
 for fname in glob.glob('SlotData_?.dat'):
-    print msg['modsv'] % fname
+    print(msg['modsv'] % fname)
     with open(fname, 'r+b') as f:
         content = f.read()  # small file, read it all
         content = content[:4] + sig + content[19:]
@@ -77,7 +78,7 @@ for fname in glob.glob('SlotData_?.dat'):
         f.write(content)
 
 # Modify original shared GameData.dat
-print msg['modgd']
+print(msg['modgd'])
 os.rename('savemod_GameData.dat', 'GameData.dat')
 with open('GameData.dat', 'r+b') as f:
     content = f.read()
@@ -85,7 +86,7 @@ with open('GameData.dat', 'r+b') as f:
     f.seek(0)
     f.write(content)
 
-print msg['end']
+print(msg['end'])
 p = platform.system()
 if p == 'Windows':
     os.system('pause')  # I don't think anybody will use this on linux
