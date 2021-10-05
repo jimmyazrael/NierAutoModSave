@@ -7,7 +7,7 @@ This script will guide and help you to import Nier:A's saves shared by others.
 Requirement:
 1. Preferably you should have received the whole save folder,
 or at least you should have the following files:
-    GameData.bat, one or more than one of the SlotData files
+    GameData.dat, one or more than one of the SlotData files
     and probably SystemData.dat. Although the use of SystemData.dat
     is still unknown.
 2. Please make sure you back up your own save folder, as using other's 
@@ -32,7 +32,7 @@ import platform
 msg = dict()
 # English messages
 msg['gd_not_found'] = '''
-    GameData.bat not found in this directory, please find and put it here.
+    GameData.dat not found in this directory, please find and put it here.
     Press Enter to continue when the file is ready.'''
 msg['gen_msg'] = '''
     A new GameData.dat is currently needed to continue the process.
