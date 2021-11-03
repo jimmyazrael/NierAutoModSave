@@ -243,4 +243,5 @@ if __name__ == "__main__":
 
     except Exception as e:
         print("[!] An error occurred: {0}".format(e))
+        input("Press enter to exit.")
         sys.exit(3)
