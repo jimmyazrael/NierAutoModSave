@@ -47,8 +47,7 @@ class Main():
         The initialization method of Main() class.
         """
 
-        # The first item in the index of the `self.messages` variable is for English and
-        # the second one is for Chinese (中文).
+        # self.messages format: {<language>: {<message_id>: <message>},}
 
         # You can add a new language by adding a new item to the `self.messages` variable.
         self.messages = {
