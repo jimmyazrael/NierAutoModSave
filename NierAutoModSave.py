@@ -185,12 +185,12 @@ Mangyaring buksan ang laro. Huwag isarado ang window na ito.""",
         # ? STEP #2: Rename GameData.dat to savemod_GameData.dat.
 
         # If savemod_GameData.dat exists, delete it.
-        if os.path.isfile("savemod_GameData.dat"):
-            os.remove("savemod_GameData.dat")
+        if os.path.isfile(os.path.join(self.savefile_path, "savemod_GameData.dat")):
+            os.remove(os.path.join(self.savefile_path, "savemod_GameData.dat"))
 
         else:
             # Rename GameData.dat to savemod_GameData.dat.
-            os.rename("GameData.dat", "savemod_GameData.dat")
+            os.rename(os.path.join(self.savefile_path, "GameData.dat"), os.path.join(self.savefile_path, "savemod_GameData.dat"))
 
         # ? STEP #3: Extract signature string.
         while True:
@@ -219,7 +219,7 @@ Mangyaring buksan ang laro. Huwag isarado ang window na ito.""",
 
         # ? STEP #5: Modify original shared GameData.dat.
         print(self.getMessage("modgd"))
-        os.rename("savemod_GameData.dat", "GameData.dat")
+        os.rename(os.path.join(self.savefile_path, "savemod_GameData.dat"), os.path.join(self.savefile_path, "GameData.dat"))
         with open(os.path.join(self.savefile_path, "GameData.dat"), "rb+") as f:
             content = f.read()
             content = signature + content[15:]
