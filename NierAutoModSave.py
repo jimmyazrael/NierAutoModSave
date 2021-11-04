@@ -75,7 +75,7 @@ Please start the game. Do not close this window.""",
                 "modgd": u"修改 GameData.dat...",
                 "end": u"\n任务完成。荣耀归于人类！"
             },
-            u"Tagalog": {
+            "Tagalog": {
                 "gd_not_found": "Hindi makita ang GameData.dat sa folder na ito. Pakihanap at pakilagay ang mga files dito at i-press ang ENTER.",
                 "confirm_gd_found": "Nakita ang GameData.dat sa default folder:\n{0}",
                 "gen_msg": """\
@@ -173,9 +173,12 @@ Mangyaring buksan ang laro. Huwag isarado ang window na ito.""",
                             gamedata_exists = True
                             break
 
-                        else:
+                        elif set_savefile_path_confirm.lower().startswith('n'):
                             input(self.getMessage("gd_not_found"))
                             return 1
+
+                        else:
+                            continue
 
             else:
                 # This means that the user has the GameData.dat in the current directory.
